@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int count =1;
+    cout<<count<<" ";
+    for(int i=1;i<n/2;i++){
+        if(i%2==0){
+            cout<<count+1<<" ";
+            count=count+1;
+        }
+        else
+        {
+            cout<<count+3<<" ";
+            count=count+3;
+        }
+        
+    }
+    cout<<endl;
+    int count1=2;
+    cout<<count1<<" ";
+    for(int i=2;i<n/2+1;i++){
+        if(i%2==0){
+            cout<<count1+1<<" ";
+            count1=count1+1;
+        }
+        else
+        {
+            cout<<count1+3<<" ";
+            count1=count1+3;
+        }
+        
+    }
+    if(n%2!=0){
+        cout<<n<<" ";
+    }
+    
+    
+    return 0;
+}
