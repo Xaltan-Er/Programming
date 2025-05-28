@@ -1,0 +1,45 @@
+2A3B4C1D
+AABBBCCCCD
+Problem Statement: Repeat Characters from Encoded String
+You are given a string where each pair of characters represents:
+
+A digit (0–9), indicating the number of times the next character should be repeated.
+
+A character to be repeated.
+
+Example input:
+
+arduino
+Copy
+Edit
+"2A3B4C1D"
+Meaning:
+
+Repeat 'A' 2 times → "AA"
+
+Repeat 'B' 3 times → "BBB"
+
+Repeat 'C' 4 times → "CCCC"
+
+Repeat 'D' 1 time → "D"
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        string given = "2A3B4C1D";
+        string result = "";
+        for(int i=0 ;i<given.Length;i+=2)
+        {
+            int repeatCount = given[i] - '0';
+            char ch = given[i + 1];
+             for (int j = 0; j < repeatCount; j++)
+            {
+                result += ch;
+            }
+        }
+        Console.WriteLine(result);
+    }
+}
